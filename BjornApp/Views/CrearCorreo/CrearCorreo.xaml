@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BjornApp.Views.CrearCorreo.CrearCorreo"
+             xmlns:degradado="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="240"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--Degradado-->
+        <degradado:PancakeView Grid.RowSpan="2" 
+                               BackgroundGradientStartPoint="0,1" 
+                               BackgroundGradientEndPoint="0,0">
+            <degradado:PancakeView.BackgroundGradientStops>
+                <degradado:GradientStopCollection>
+                    <degradado:GradientStop Color="#F44A32" Offset="0"/>
+                    <degradado:GradientStop Color="#E83C40" Offset="0.8"/>
+                </degradado:GradientStopCollection>
+            </degradado:PancakeView.BackgroundGradientStops>
+        </degradado:PancakeView>
+        <Image Source="bjorn.png" Margin="0,20,0,0" Grid.Row="0"/>
+        <StackLayout Grid.Row="1" Margin="20" Orientation="Vertical">
+            <StackLayout HeightRequest="50" Orientation="Horizontal">
+                <Button x:Name="btnSubirFoto" Clicked="btnSubirFoto_Clicked" Text="Subir Foto" BackgroundColor="#31C3A2" CornerRadius="30" TextColor="White"/>
+                <Image Source="https://i.ibb.co/mTRLCqr/camara-fotografica.png"  x:Name="imgFotoPerfil"  />
+            </StackLayout>
+            <Entry x:Name="txtNombre" TextColor="White" PlaceholderColor="White" FontAttributes="Bold" Placeholder="Nombre"/>
+            <Entry x:Name="txtCorreo" TextColor="White" PlaceholderColor="White" FontAttributes="Bold" Placeholder="Correo"/>
+            <Entry x:Name="txtPassword" TextColor="White" PlaceholderColor="White" FontAttributes="Bold" Placeholder="Password" IsPassword="True"/>
+            <Button Text="Crear Cuenta" BackgroundColor="White" TextColor="Black" FontAttributes="Bold"
+                    CornerRadius="20" WidthRequest="250" HorizontalOptions="Center"
+                    x:Name="btnCrearCuenta"
+                    Clicked="btnCrearCuenta_Clicked"/>
+        </StackLayout>
+        
+    </Grid>
+</ContentPage>

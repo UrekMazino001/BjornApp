@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BjornApp.Views.Configuraciones.AgregarCategoria">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Categoria" x:Name="txtCategoria"></Entry>
+            <Entry Placeholder="Prioridad" x:Name="txtPrioridad"></Entry>
+            <Entry Placeholder="Color" x:Name="txtColor"></Entry>
+            <Button x:Name="btnAgregar" Text="Guardar" Clicked="btnAgregar_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

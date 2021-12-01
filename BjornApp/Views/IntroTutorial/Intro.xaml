@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BjornApp.Views.IntroTutorial.Intro"
+             xmlns:vistas="clr-namespace:BjornApp.Views.IntroTutorial"
+             >
+    <Grid BackgroundColor="#201F25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <CarouselView IndicatorView="Indicador" Grid.Row="0" >
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type ContentView}">
+                    <vistas:Vista1/>
+                    <vistas:Vista2/>
+                    <vistas:Vista3/>
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView Content="{Binding .}"/>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <IndicatorView Grid.Column="0" x:Name="Indicador"
+                           IndicatorColor="White"
+                           SelectedIndicatorColor="Yellow"
+                           Grid.ColumnSpan="2"/>
+            <Button x:Name="btnSaltar"
+                    Clicked="btnSaltar_Clicked"
+                    Text="Saltar" Grid.Column="1" 
+                    BackgroundColor="#FFD340" 
+                    TextColor="Black"
+                    FontAttributes="Bold" 
+                    Margin="0,5,5,5" 
+                    CornerRadius="20" 
+                  />
+        </Grid>
+    </Grid>
+</ContentPage>

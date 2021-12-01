@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BjornApp.Views.Contenedores.ContenedorPrincipal"
+            xmlns:tabPage="clr-namespace:BjornApp.Views.TabPage"
+            xmlns:config="clr-namespace:BjornApp.Views.Configuraciones"
+            
+            BarTextColor="WhiteSmoke"
+            BarBackgroundColor="#E83D40"
+            SelectedTabColor="White"
+            UnselectedTabColor="#f99680"
+            >
+  <!--Pages can be added as references or inline-->
+    
+    
+    <tabPage:Categoria Title="Menú" IconImageSource="menu.png"/>
+    <tabPage:Perfil Title="Mi Cuenta" IconImageSource="usuario.png"/>
+    <config:ConfigAnunciante Title="Anunciante" IconImageSource="megafono.png"/>
+</TabbedPage>

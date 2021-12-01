@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BjornApp.Views.Login.Login"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" >
+
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid VerticalOptions="Center" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <forms:AnimationView
+            x:Name="animationView"
+            Grid.Row="0"
+            Animation="LoginCat.json"
+            HeightRequest="350"
+            WidthRequest="250"
+            AutoPlay="False"
+            RepeatMode="Infinite"
+            VerticalOptions="Center" />
+            <Label Grid.Row="1" Text="Bjorn" TextColor="Wheat" HorizontalTextAlignment="Center" FontSize="40" FontAttributes="Bold"/>
+        </Grid>
+        <StackLayout Grid.Row="1">
+            <StackLayout Orientation="Horizontal">
+                <Image WidthRequest="25" Source="https://i.ibb.co/qkGtXjJ/corazon.png" />
+                <Entry Placeholder="Correo" x:Name="txtCorreo" TextChanged="txtCorreo_TextChanged" PlaceholderColor="#7F7F7F" TextColor="White" FontAttributes="Bold" WidthRequest="300"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image WidthRequest="25" Source="https://i.ibb.co/f9tGGh2/corona.png" />
+                <Entry Placeholder="Password" x:Name="txtPassword" TextChanged="txtPassword_TextChanged" PlaceholderColor="#7F7F7F" TextColor="White" FontAttributes="Bold" WidthRequest="300"/>
+            </StackLayout>
+            <Button x:Name="btnIniciar" Clicked="btnIniciar_Clicked" Margin="0,20,0,0" Text="Iniciar" TextColor="Black" BackgroundColor="#FFD33F" FontSize="16" CornerRadius="30" FontAttributes="Bold" TextTransform="None" />
+            <Button x:Name="btnCrearCuenta" Clicked="btnCrearCuenta_Clicked" Text="Crear cuenta" TextColor="White" BackgroundColor="Transparent" FontSize="16"  FontAttributes="Bold" TextTransform="None"/>
+        </StackLayout>
+        <StackLayout Margin="0,40,0,0" Grid.Row="2" HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="Una App de " HorizontalTextAlignment="Center" TextColor="#404040"/>
+            <Label Text="Ariel Cabrera" HorizontalTextAlignment="Center" TextColor="#FFD33F"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

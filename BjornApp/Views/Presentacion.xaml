@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BjornApp.Views.Presentacion">
+    <Grid  BackgroundColor="#151515">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image Source="bjorn.png" x:Name="Inicio"/>
+            <Label Text="BJORN" TextColor="White" 
+               HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold"/>
+            <Label Text="From" 
+               TextColor="#F8F9FA" 
+               HorizontalOptions="Center"
+               HeightRequest="150"/>
+            <Label Text="A R I E L 001" 
+               TextColor="#EC4827" 
+               HorizontalOptions="Center"
+               FontSize="16"
+               FontAttributes="Bold"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
